@@ -60,5 +60,7 @@ export const deleteNote = async (request, response) => {
     await Note.findByIdAndRemove(id)
 
     response.status(200)
-        .send('Note has been deleted.')
+        .json({
+            message: 'Note has been deleted.'
+        })
 }

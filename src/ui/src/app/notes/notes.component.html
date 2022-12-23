@@ -1,0 +1,14 @@
+<div class="container">
+    <h2 class="title">Notes</h2>
+    <div class="subcontainer">
+        <div class="note-container" *ngFor="let note of notes">
+            <input class="note-input" type="text" [value]="note.title" [(ngModel)]="note.title" />
+            <input class="note-input" type="text" [value]="note.content" [(ngModel)]="note.content" [ngStyle]="{height: '200px'}" />
+            <div class="note-actions-container">
+                <button class="note-button note-update-button" (click)="updateNote($event, note)">Update</button>
+                <button class="note-button note-delete-button" (click)="deleteNote($event, note._id)">Delete</button>
+            </div>
+        </div>
+        <button class="note-button note-create-button" routerLink="/create">Create</button>
+    </div>
+</div>

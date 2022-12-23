@@ -20,12 +20,12 @@ Developed by Salim Mghari
 #### Server:
 
 > - `cd src/`
-> - `npm start`
+> - `npm install && npm start`
 
 #### Client:
 
 > - `cd src/ui/`
-> - `ng serve`
+> - `npm install && ng serve`
 
 ---
 
